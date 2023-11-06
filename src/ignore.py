@@ -38,8 +38,9 @@ def read_ignore(directory_path: str,
             elif line.startswith("*"):
                 files_extensions.append(line.split("*.")[1].strip())
             else:
-                files.append(line.strip())
-            
+                if not line.startswith("#"):
+                    files.append(line.strip())
+
         return Ignore(files=files, 
                       files_extensions=files_extensions,
                       folders=folders)

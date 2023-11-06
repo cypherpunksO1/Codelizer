@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from src.utils import format_number
 
 
 @dataclass
@@ -18,8 +19,8 @@ class Analyze:
     
     def __iter__(self):
         return iter([
-            self.lines_count,
-            self.files_count, 
-            self.folders_count
+            format_number(self.lines_count),
+            format_number(self.files_count), 
+            format_number(self.folders_count)
         ])
     
