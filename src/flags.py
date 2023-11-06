@@ -5,9 +5,9 @@ import argparse
 def get_flags():
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--dir', 
+    parser.add_argument("--dir", 
                         type=str, 
-                        help='Other dir')
+                        help="Other dir")
     
     parser.add_argument("--file", 
                         type=str, 
@@ -18,32 +18,32 @@ def get_flags():
                         help=f"Set new {IGNORE_F_NAME}")
     
     parser.add_argument("-tree", 
-                        action='store_true', 
+                        action="store_true", 
                         help="View files tree")
     
     
     parser.add_argument("-exd", 
-                        action='store_true', 
+                        action="store_true", 
                         help="Exclude directories count from table")
     
     parser.add_argument("-exf", 
-                        action='store_true', 
+                        action="store_true", 
                         help="Exclude files count from table")
     
     parser.add_argument("-exl", 
-                        action='store_true', 
+                        action="store_true", 
                         help="Exclude lines count from table")
     
-    parser.add_argument('command', 
-                        nargs='?', 
-                        default='default', 
-                        choices=['makeignore', 'struct'], 
-                        help='Create .cdl_ignore')
-    # parser.add_argument('command', 
-    #                     nargs='?', 
-    #                     default='default', 
-    #                     choices=['struct', 'default'], 
-    #                     help='Print dirs tree')
+    parser.add_argument("command", 
+                        nargs="?", 
+                        default="default", 
+                        choices=["makeignore", "struct", "get"], 
+                        help="Create .cdl_ignore")
+    # parser.add_argument("command", 
+    #                     nargs="?", 
+    #                     default="default", 
+    #                     choices=["struct", "default"], 
+    #                     help="Print dirs tree")
 
 
     args = parser.parse_args()

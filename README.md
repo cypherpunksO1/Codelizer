@@ -47,7 +47,7 @@ app.py
 code.py
 ```
 
-Так выглядела структура проекта для `codelizer` до обновления `.cdl_ignore`:
+Так выглядела структура проекта для `codelizer get` до обновления `.cdl_ignore`:
 
 ```gitignore
 src
@@ -84,7 +84,7 @@ app.py
 *.txt
 ```
 
-Так выглядела структура проекта для `codelizer` до обновления `.cdl_ignore`:
+Так выглядела структура проекта для `codelizer get` до обновления `.cdl_ignore`:
 
 ```gitignore
 src
@@ -110,7 +110,7 @@ app.py
 
 Как мы видим, ненужные файлы пропали. 
 Убедиться в этом мы также можем написав
-`./codelizer --tree`
+`./codelizer get --tree`
 
 ```python
 +-------------+-------+
@@ -132,7 +132,7 @@ app.py
 folder/
 ```
 
-Так выглядела структура проекта для `codelizer` до обновления `.cdl_ignore`:
+Так выглядела структура проекта для `codelizer get` до обновления `.cdl_ignore`:
 
 ```gitignore
 src
