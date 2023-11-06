@@ -192,10 +192,10 @@ test ➤
 
 Разрешите выполнение файла через chmod:
 ```bash
-chmod +x weather
+chmod +x codelized
 ```
 
 Создайте ярлык на скрипт:
 ```bash
-sudo ln -s $(pwd)/weather /usr/local/bin/
+sudo ln -s $(pwd)/codelized /usr/local/bin/
 ```
