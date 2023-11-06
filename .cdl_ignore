@@ -1,5 +1,5 @@
-# .cdl_ignore for python project
 
+# .cdl_ignore for python project
 *.md
 *.yaml
 *.ini
@@ -11,7 +11,6 @@
 *.cpthon-311.pyc
 *.pyc
 *.sample
-
 env/
 venv/
 __pycache__/

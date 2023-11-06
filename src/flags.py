@@ -33,6 +33,13 @@ def get_flags():
     parser.add_argument("-exl", 
                         action='store_true', 
                         help="Exclude lines count from table")
+    
+    parser.add_argument('command', 
+                        nargs='?', 
+                        default='default', 
+                        choices=['makeignore', 'default'], 
+                        help='Команда для выполнения')
+
 
     args = parser.parse_args()
     

@@ -3,6 +3,7 @@
 from src.printer import printer
 from src.analizer import analize
 from src.flags import get_flags
+from src.utils import make_ignore
 import os
 import time
 
@@ -11,12 +12,16 @@ def main():
     scan_start = time.time()
     directory_path = os.getcwd()
     flags = get_flags()
-    analyze_result = analize(directory_path=directory_path, 
-                             flags=flags)
-    printer(analyze=analyze_result, 
-            tree=flags.tree, 
-            directory_path=directory_path, 
-            scan_start=scan_start)
+    
+    if flags.command == 'makeignore':
+        make_ignore()
+    else:
+        analyze_result = analize(directory_path=directory_path, 
+                                flags=flags)
+        printer(analyze=analyze_result, 
+                tree=flags.tree, 
+                directory_path=directory_path, 
+                scan_start=scan_start)
     
     
 if __name__ == "__main__":
