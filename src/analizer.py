@@ -48,10 +48,10 @@ def analize(directory_path: str,
     if analyze_file_result: 
         return analyze_file_result
     
-    directory_path = flags.dir if flags.dir else directory_path
     total_lines, total_files, total_folders = (0, 0, 0)
     ignore = read_ignore(directory_path=directory_path, 
                          flags=flags)
+    directory_path = flags.dir if flags.dir else directory_path
     
     tree = dict()
 

@@ -166,6 +166,28 @@ app.py
 - -exl - исключает статистику количества строк
 
 
+# Commands
+
+`codelizer makeignore` — создаёт ignore файл в директории
+`codelizer struct` — отображает структуру файлов и папок в директории
+
+#### struct
+
+Пример использования:
+
+```bash
+test ➤ codelizer struct
+test ➤ 
+    .cdl_ignore
+    test.txt
+    test3 ➤
+    ⎮   file.txt
+    test2 ➤
+    ⎮   file.txt
+    ⎮   test2.1 ➤
+```
+
+
 # Установка codelizer в систему
 
 Разрешите выполнение файла через chmod:

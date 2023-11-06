@@ -37,8 +37,13 @@ def get_flags():
     parser.add_argument('command', 
                         nargs='?', 
                         default='default', 
-                        choices=['makeignore', 'default'], 
-                        help='Команда для выполнения')
+                        choices=['makeignore', 'struct'], 
+                        help='Create .cdl_ignore')
+    # parser.add_argument('command', 
+    #                     nargs='?', 
+    #                     default='default', 
+    #                     choices=['struct', 'default'], 
+    #                     help='Print dirs tree')
 
 
     args = parser.parse_args()

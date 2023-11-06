@@ -3,7 +3,8 @@
 from src.printer import printer
 from src.analizer import analize
 from src.flags import get_flags
-from src.utils import make_ignore
+from src.commands import (make_ignore, 
+                          print_directory_contents)
 import os
 import time
 
@@ -15,6 +16,8 @@ def main():
     
     if flags.command == 'makeignore':
         make_ignore()
+    elif flags.command == "struct":
+        print_directory_contents(directory_path)
     else:
         analyze_result = analize(directory_path=directory_path, 
                                 flags=flags)
