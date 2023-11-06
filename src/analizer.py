@@ -36,7 +36,7 @@ def check_file_extension(file: str,
     
     file_extension = file.split('.')
     if len(file_extension) > 1:
-        file_extension = file_extension[1]
+        file_extension = file_extension[-1]
         return file_extension not in extensions
 
 

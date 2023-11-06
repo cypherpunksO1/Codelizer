@@ -1,9 +1,14 @@
 from src.schemas import Analyze
 from prettytable import PrettyTable
+import time
 
 
 def printer(analyze: Analyze, 
-            tree: bool) -> None:
+            tree: bool, 
+            directory_path: str, 
+            scan_start: float) -> None:
+    
+    print("\n➤ " + directory_path + "\n")
     
     if tree:
         tree_table = PrettyTable()
@@ -19,3 +24,4 @@ def printer(analyze: Analyze,
     stats_table.add_row(list(analyze))
     
     print("\n" + str(stats_table) + "\n")
+    print(f"➤ Scan time: {round(time.time() - scan_start, 1)}s.\n\n")

@@ -36,7 +36,7 @@ def read_ignore(directory_path: str,
             if line.strip().endswith('/'):
                 folders.append(line[:-2].strip())
             elif line.startswith("*"):
-                files_extensions.append(line.split("*.")[1])
+                files_extensions.append(line.split("*.")[1].strip())
             else:
                 files.append(line.strip())
             
