@@ -192,10 +192,10 @@ test ➤
 
 Разрешите выполнение файла через chmod:
 ```bash
-chmod +x codelized
+chmod +x codelizer
 ```
 
 Создайте ярлык на скрипт:
 ```bash
-sudo ln -s $(pwd)/codelized /usr/local/bin/
+sudo ln -s $(pwd)/codelizer /usr/local/bin/
 ```
